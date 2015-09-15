@@ -1,0 +1,27 @@
+package mad.pokedex.views;
+
+import android.graphics.Rect;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+
+/**
+ * This Item Decoration is for RecyclerView Padding to customize the padding for the items inside it.
+ */
+public class SpacesItemDecoration extends RecyclerView.ItemDecoration {
+    private int space;
+
+    public SpacesItemDecoration(int space) {
+        this.space = space;
+    }
+
+    @Override
+    public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+        outRect.left = space;
+        outRect.right = space;
+        outRect.bottom = space;
+
+        // Add top margin only for the first item to avoid double space between items
+        if (parent.getChildPosition(view) == 0)
+            outRect.top = space;
+    }
+}
