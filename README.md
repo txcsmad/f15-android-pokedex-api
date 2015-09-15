@@ -12,3 +12,4 @@ compile 'com.squareup.okhttp:okhttp:2.0.0'
 Note: Currently Retrofit is doing a major overhaul and is currently at version 2.00beta1. Once it becomes more stable this will be updated to teach the latest and greatest ways to access api calls.
 
 ### Using Retrofit & Pokedex API
+To use retrofit, you must create a interface for the url and the type of data ( Java Object ) the api call will return.
