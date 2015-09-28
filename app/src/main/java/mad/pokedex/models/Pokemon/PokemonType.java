@@ -14,24 +14,24 @@ public class PokemonType extends PokemonDetailItem {
         int result;
 
         switch (getName()) {
-            case "Bug":
-            case "Dragon":
-            case "Fairy":
-            case "Fire":
-            case "Ghost":
-            case "Ground":
-            case "Normal":
-            case "Psychic":
-            case "Steel":
-            case "Dark":
-            case "Electric":
-            case "Fighting":
-            case "Flying":
-            case "Grass":
-            case "Ice":
-            case "Poison":
-            case "Rock":
-            case "Water":
+            case "bug":
+            case "dragon":
+            case "fairy":
+            case "fire":
+            case "ghost":
+            case "ground":
+            case "normal":
+            case "psychic":
+            case "steel":
+            case "dark":
+            case "electric":
+            case "fighting":
+            case "flying":
+            case "grass":
+            case "ice":
+            case "poison":
+            case "rock":
+            case "water":
                 int id = context.getResources().getIdentifier(getName().toLowerCase(), "color", context.getPackageName());
                 result = context.getResources().getColor(id);
                 break;
@@ -47,13 +47,13 @@ public class PokemonType extends PokemonDetailItem {
         int result;
 
         switch (getName()) {
-            case "Fairy":
-            case "Grass":
-            case "Normal":
-            case "Steel":
-            case "Electric":
-            case "Flying":
-            case "Ice":
+            case "fairy":
+            case "grass":
+            case "normal":
+            case "steel":
+            case "electric":
+            case "flying":
+            case "ice":
                 result = context.getResources().getColor(android.R.color.primary_text_light);
                 break;
             default:
