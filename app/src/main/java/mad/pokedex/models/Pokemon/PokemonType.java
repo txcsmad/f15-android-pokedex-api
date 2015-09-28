@@ -33,10 +33,10 @@ public class PokemonType extends PokemonDetailItem {
             case "Rock":
             case "Water":
                 int id = context.getResources().getIdentifier(getName().toLowerCase(), "color", context.getPackageName());
-                result = context.getColor(id);
+                result = context.getResources().getColor(id);
                 break;
             default:
-                result = context.getColor(R.color.accent);
+                result = context.getResources().getColor(R.color.accent);
                 break;
         }
 
@@ -54,10 +54,10 @@ public class PokemonType extends PokemonDetailItem {
             case "Electric":
             case "Flying":
             case "Ice":
-                result = context.getColor(android.R.color.primary_text_light);
+                result = context.getResources().getColor(android.R.color.primary_text_light);
                 break;
             default:
-                result = context.getColor(android.R.color.white);
+                result = context.getResources().getColor(android.R.color.white);
                 break;
         }
 
