@@ -21,12 +21,16 @@ public class PokedexClient {
 
     protected PokedexClient() {
 
+        // TODO: Create the restAdapter
+
         RestAdapter restAdapter = new RestAdapter.Builder()
                 .setEndpoint(POKEDEX_BASE_URL)
                 .build();
 
         pokedexService = restAdapter.create(PokedexService.class);
     }
+
+    // TODO: Method to obtain service var
 
     public PokedexService getApiService() {
         return pokedexService;

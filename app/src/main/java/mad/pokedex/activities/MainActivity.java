@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setupToolbar((Toolbar) findViewById(R.id.toolbar));
         setupRecyclerView((RecyclerView) findViewById(R.id.recyclerview));
 
-        getPokedex();
+        // TODO: Call to get the list of pokemons from the api
 
     }
 
@@ -81,32 +81,5 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void getPokedex() {
-        PokedexService hackTxService = PokedexClient.getInstance().getApiService();
-        hackTxService.getPokedex(new Callback<PokedexHeader>() {
-            @Override
-            public void success(PokedexHeader pokedexHeader, Response response) {
-                Log.v(TAG, "pokedex retrieved!");
-
-                pokedexList.clear();
-                pokedexList.addAll(pokedexHeader.getObjects().get(0).getPokemon());
-                Collections.sort(pokedexList, new Comparator<PokedexPokemon>() {
-                    public int compare(PokedexPokemon pokemon1, PokedexPokemon pokemon2) {
-                        return pokemon1.getPokedexId() - pokemon2.getPokedexId();
-                    }
-                });
-                for(int position = pokedexList.size() - 1; position >= 0; position--) {
-                    if(pokedexList.get(position).getPokedexId() < 1000)
-                        break;
-                    pokedexList.remove(position);
-                }
-                pokedexAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void failure(RetrofitError error) {
-                Log.v(TAG, error.toString());
-            }
-        });
-    }
+    // TODO: Function to get the list of pokemons and display them in the list
 }

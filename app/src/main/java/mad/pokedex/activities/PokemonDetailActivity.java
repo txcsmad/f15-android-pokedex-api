@@ -40,7 +40,7 @@ public class PokemonDetailActivity extends AppCompatActivity {
 
         setupToolbar((Toolbar) findViewById(R.id.toolbar));
 
-        getPokemonDetails();
+        // TODO: Call the function to get pokemon detail info
     }
 
     private void setupToolbar(Toolbar toolbar) {
@@ -102,22 +102,5 @@ public class PokemonDetailActivity extends AppCompatActivity {
         speed_text.setText("" + pokemonDetails.getSpeed());
     }
 
-    private void getPokemonDetails() {
-        final int pokedex_id = getIntent().getIntExtra("pokedex_id", 1);
-
-        PokedexService hackTxService = PokedexClient.getInstance().getApiService();
-        hackTxService.getPokemonDetails(pokedex_id, new Callback<PokemonDetails>() {
-            @Override
-            public void success(PokemonDetails pokemonApiDetails, Response response) {
-                Log.v(TAG, "pokemon details retrieved!");
-                pokemonDetails = pokemonApiDetails;
-                setupPokemonDetails();
-            }
-
-            @Override
-            public void failure(RetrofitError error) {
-                Log.v(TAG, error.toString());
-            }
-        });
-    }
+    // TODO: Function to get the details of the individual pokemon
 }
