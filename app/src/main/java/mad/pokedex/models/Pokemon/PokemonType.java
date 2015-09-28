@@ -1,6 +1,7 @@
 package mad.pokedex.models.Pokemon;
 
 import android.content.Context;
+import android.util.Log;
 
 import mad.pokedex.R;
 import mad.pokedex.models.Pokedex.PokedexPokemon;
@@ -14,25 +15,25 @@ public class PokemonType extends PokemonDetailItem {
         int result;
 
         switch (getName()) {
-            case "Bug":
-            case "Dragon":
-            case "Fairy":
-            case "Fire":
-            case "Ghost":
-            case "Ground":
-            case "Normal":
-            case "Psychic":
-            case "Steel":
-            case "Dark":
-            case "Electric":
-            case "Fighting":
-            case "Flying":
-            case "Grass":
-            case "Ice":
-            case "Poison":
-            case "Rock":
-            case "Water":
-                int id = context.getResources().getIdentifier(getName().toLowerCase(), "color", context.getPackageName());
+            case "bug":
+            case "dragon":
+            case "fairy":
+            case "fire":
+            case "ghost":
+            case "ground":
+            case "normal":
+            case "psychic":
+            case "steel":
+            case "dark":
+            case "electric":
+            case "fighting":
+            case "flying":
+            case "grass":
+            case "ice":
+            case "poison":
+            case "rock":
+            case "water":
+                int id = context.getResources().getIdentifier(getName(), "color", context.getPackageName());
                 result = context.getResources().getColor(id);
                 break;
             default:
