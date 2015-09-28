@@ -48,13 +48,13 @@ public class PokemonType extends PokemonDetailItem {
         int result;
 
         switch (getName()) {
-            case "Fairy":
-            case "Grass":
-            case "Normal":
-            case "Steel":
-            case "Electric":
-            case "Flying":
-            case "Ice":
+            case "fairy":
+            case "grass":
+            case "normal":
+            case "steel":
+            case "electric":
+            case "flying":
+            case "ice":
                 result = context.getResources().getColor(android.R.color.primary_text_light);
                 break;
             default:
