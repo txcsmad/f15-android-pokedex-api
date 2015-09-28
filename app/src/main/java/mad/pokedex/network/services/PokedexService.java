@@ -10,7 +10,7 @@ import retrofit.http.Path;
  * This is the retrofit interface that connects the api calls into actual objects.
  */
 public interface PokedexService {
-    // TODO: Call to get a list of all Pokemons
+    // TODO: Call to get a list of all pokemons
 
     // TODO: Call to get details from a pokemon
 

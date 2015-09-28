@@ -50,6 +50,7 @@ public class PokedexAdapter extends RecyclerView.Adapter<PokedexAdapter.PokemonL
         return new PokemonListHolder(v, position);
     }
 
+    // TODO: uncomment the two lines below when the object is linked correctly
     @Override
     public void onBindViewHolder(PokemonListHolder holder, final int position) {
         final PokedexPokemon pokemon = pokedexList.get(position);
@@ -59,12 +60,12 @@ public class PokedexAdapter extends RecyclerView.Adapter<PokedexAdapter.PokemonL
             public void onClick(View v) {
                 Intent detailIntent = new Intent(v.getContext(), PokemonDetailActivity.class);
                 detailIntent.putExtra("pokedex_id", pokemon.getPokedexId());
-                detailIntent.putExtra("name", pokemon.getName() + " - #" + pokemon.get3DigitPokeId());
+                //detailIntent.putExtra("name", pokemon.getName() + " - #" + pokemon.get3DigitPokeId());
                 detailIntent.putExtra("image_url", pokemon.getImageUrl());
                 v.getContext().startActivity(detailIntent);
             }
         });
-        holder.name.setText(pokemon.getName());
+        //holder.name.setText(pokemon.getName());
         Picasso.with(holder.view.getContext()).load(pokemon.getImageUrl()).into(holder.image);
     }
 

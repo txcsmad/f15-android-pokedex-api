@@ -9,27 +9,11 @@ import java.util.Comparator;
  * Created by Drew on 9/10/15.
  */
 public class PokedexPokemon {
-    private String name;
-    private String resource_uri;
-
-    public String getName() {
-        return name.substring(0,1).toUpperCase() + name.substring(1);
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getResource_uri() {
-        return resource_uri;
-    }
-
-    public void setResource_uri(String resource_uri) {
-        this.resource_uri = resource_uri;
-    }
+    // TODO: Link Pokedex Pokemon
 
     public int getPokedexId() {
-        return Integer.parseInt(getResource_uri().substring(15, getResource_uri().length() - 1));
+        // TODO: Uncomment when linked
+        return 0; //Integer.parseInt(getResource_uri().substring(15, getResource_uri().length() - 1));
     }
 
     public String get3DigitPokeId() {

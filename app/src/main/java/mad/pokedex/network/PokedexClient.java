@@ -30,7 +30,7 @@ public class PokedexClient {
         pokedexService = restAdapter.create(PokedexService.class);
     }
 
-    // TODO: Method to obtain service var
+    // TODO: Function to obtain service var
 
     public PokedexService getApiService() {
         return pokedexService;
